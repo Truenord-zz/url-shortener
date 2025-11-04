@@ -39,3 +39,9 @@ def read_root():
             "GET /statistics/{short_code}": "Get URL statistics"
         }
     }
+    
+@app.post("/shorten", response_model=URLResponse)
+def shorten_url(request: URLRequest, db: Session = Depends(get_db)):
+    pass 
+
+
